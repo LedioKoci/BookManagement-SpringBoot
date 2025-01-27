@@ -6,21 +6,21 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "\"user\"")
+@Table(name = "\"User\"")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "username")
+    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
 }
