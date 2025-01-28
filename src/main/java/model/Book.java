@@ -10,8 +10,8 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "bookId", nullable = false)
+    private Integer bookId;
 
     @Column(name = "title", nullable = false)
     private String title;

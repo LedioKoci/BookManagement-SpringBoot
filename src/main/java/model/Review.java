@@ -10,15 +10,21 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "reviewId", nullable = false)
+    private Integer reviewId;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "bookId", nullable = false)
     private Book book;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private User user;
+
+    @Column(name = "rating", nullable = false)
+    private Integer rating;
+
+    @Column(name = "comment", nullable = false)
+    private String comment;
 
 }
