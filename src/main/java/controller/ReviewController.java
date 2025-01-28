@@ -3,16 +3,16 @@ package controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.UserService;
+import service.ReviewService;
 
 @RestController
-@RequestMapping("/api/v1/user")
-public class UserController {
+@RequestMapping("/api/v1/review")
+public class ReviewController {
 
     @Autowired
-    private final UserService userService;
+    private final ReviewService reviewService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public ReviewController(ReviewService reviewService) {
+        this.reviewService = reviewService;
     }
 }
