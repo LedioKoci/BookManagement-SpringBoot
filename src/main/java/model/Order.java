@@ -12,14 +12,14 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "orderId", nullable = false)
     private Integer id;
 
     @OneToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private User user;
 
-    @Column(name = "order_date", nullable = false)
+    @Column(name = "orderDate", nullable = false)
     private Date orderDate;
 
     @Column(name = "status", nullable = false)
